@@ -4,12 +4,25 @@
     margin: 0;
 }
 body{
-    font-family: 'Open Sans', sans-serif
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+    background-color: #fff;
+}
+html{
+    scroll-behavior: smooth;
+}
+*:focus{
+    outline: 2px solid #DE2E54;
+    outline-offset: 2px;
 }
 .site-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 .container{
     display: flex;
@@ -26,28 +39,44 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+.logo:active{
+    opacity: 0.6;
 }
 .logo-img{
     margin-right: 16px;
 }
 .logo-text{
     font-size: 24px;
+    color: #222;
+    font-weight: 600;
     line-height: 33px;
     font-family: "Open Sans";
+    transition: color .25s ease-in;
+}
+.logo-text:hover{
+    color: #DE2E54;
 }
 .header-links{
     display: flex;
     align-items: center;
-    text-transform: uppercase;
     list-style-type: none;
 }
 .header-links .list-items a{
+    text-transform: uppercase;
     text-decoration: none;
     font-size: 14px;
     letter-spacing: 2px;
     line-height: 1.5;
-    color: #222;
     font-weight: 700;
+    color: #222;
+}
+.header-links .list-items a:hover{
+    color: #DE2E54;
+}
+.header-links .list-items a:active{
+    opacity: 0.6;
 }
 .header-links .list-items{
     margin-right: 32px;
@@ -56,15 +85,29 @@ body{
     margin-right: 0;
 }
 .btn{
-    color: #fff;
-    background-color: #DE2E54;
-    padding: 12px 24px;
-    text-decoration: none;
-    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 22px;
+    border: 2px solid #de2e54;
     border-radius: 8px;
     font-size: 15px;
-    border: none;
-    margin-top: 0;
+    font-family: "Open Sans", "Arial", sans-serif;
+    letter-spacing: 2px;
+    background-color: #de2e54;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+}
+.btn:hover{
+    color: #DE2E54;
+    background-color: #fff;
+    border: 2px solid #DE2E54;
+}
+.btn:active{
+    color: #fff;
+    background-color: #DE2E54;
+    opacity: .6;
 }
 .hero-section{
     color: #fff;
@@ -74,46 +117,143 @@ body{
     width: 500px;
     padding-top: 120px;
     padding-bottom: 120px;
-    margin-right: 177px;
 }
 .hero-heading{
+    margin-top: 0;
+    font-family: 'Open Sans', 'Arial', sans-serif;
     font-size: 36px;
-    line-height: 43px;
+    line-height: 1.2;
+    margin-bottom: 16px;
 }
 .hero-text{
     font-size: 18px;
     line-height: 27px;
-    margin-top: 16px;
+    margin-top: 0;
     margin-bottom: 36px;
+}
+.hero-btn:hover{
+    border-color: transparent;
+    color: #fff;
+    background-color: rgb(222, 46, 84, .8);
+}
+.hero-btn:active{
+    opacity: 1;
+    background-color: rgb(222, 46, 84, .6);
 }
 .hero-img{
     width: 423px;
     height: 504px;
-    padding: 0;
-    margin: 0;
-}
-.services-section{
+    align-self: flex-end;
+}.index-services {
+    padding-top: 120px;
+    padding-bottom: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-.services-part-one{
+
+.index-services-heading {
+    margin-top: 0;
+    margin-bottom: 56px;
+    font-size: 36px;
+    line-height: 1.2;
+    font-family: "Open Sans", "Arial", sans-serif;
+    color: #000;
+    text-align: center;
+}
+
+.index-services-list {
+    width: 864px;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    list-style: none;
+}
+
+.index-services-item:not(:last-child) {
+    margin-bottom: 80px;
+}
+
+.index-service {
     display: flex;
     align-items: center;
 }
-.services-part-two{
+
+.index-service-img {
+    width: 200px;
+    height: 200px;
+    margin-right: 64px;
+    border-radius: 24px;
+    object-fit: cover;
+    box-shadow: 0px 12px 24px -8px rgba(0, 107, 116, 0.3);
+}
+
+.index-service-content {
+    width: 600px;
+}
+
+.index-service-title {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #222;
+}
+
+.index-service-description {
+    margin: 0;
+}
+
+.index-services-actions {
+    display: flex;
+    justify-content: center;
+}
+
+/* CTA */
+.cta {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: #0eb4c1;
+    color: #fff;
+}
+.cta-container{
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-.services-part-three{
+
+.cta-heading {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 1.2;
+    font-family: "Open Sans", "Arial", sans-serif;
+    text-align: center;
+}
+
+.cta-links {
     display: flex;
+    justify-content: center;
     align-items: center;
 }
-.services-part-four{
-    display: flex;
-    align-items: center;
+
+.cta-links-item:not(:last-child) {
+    margin-right: 40px;
 }
+.btn-outline {
+    border-color: #fff;
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-outline:hover {
+    border-color: transparent;
+    background-color: #de2e54;
+    color: #fff;
+}
+
 .register-section{
     display: flex;
     flex-direction: column;
@@ -122,12 +262,6 @@ body{
     background-color: #0EB4C1;
     padding-top: 64px;
     padding-bottom: 64px;
-}
-.register-heading{
-    margin-top: 0;
-    margin-bottom: 40px;
-    /* font-size: 36px; */
-    line-height: 43px;
 }
 .register-call-btn{
     background-color: transparent;
@@ -141,4 +275,42 @@ body{
     border: 2px solid #fff;
     line-height: 18px;
     letter-spacing: 2px;
+}
+.site-footer{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    color: #fff;
+    background-color: #222;
+}
+.footer-logo{
+    color: #fff;
+}
+.footer-logo:active{
+    color: #fff;
+    opacity: 0.6;
+}
+.footer-links{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+.footer-links .list-items:not(:last-child){
+    margin-right: 32px;
+}
+.footer-links .list-items a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    font-weight: 700;
+    transition: color .25s ease-in;
+}
+.footer-links .list-items a:hover {
+    color: #DE2E54;
+}
+.footer-links .list-items a:active {
+    color: #fff;
+    opacity: 0.6;
 }
